@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "9172063c-6932-40f3-8727-3930b834f710",
+		"name": "Health Record Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3757880"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{basicPass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{basicAdmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/health-record/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"health-record",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{basicPass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{basicAdmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/mcotuk/Downloads/exercise.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/health-record/csv/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"health-record",
+						"csv",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download all",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{basicPass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{basicAdmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/health-record/csv/download",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"health-record",
+						"csv",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download by code",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{basicPass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{basicAdmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/health-record/271636001/csv/download",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"health-record",
+						"271636001",
+						"csv",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{basicPass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{basicAdmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "page",
+						"value": "0",
+						"type": "text"
+					},
+					{
+						"key": "size",
+						"value": "3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/health-record",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"health-record"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find by code",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{basicPass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{basicAdmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/health-record/Type 1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"health-record",
+						"Type 1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete all",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{basicPass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{basicAdmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/health-record",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"health-record"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
